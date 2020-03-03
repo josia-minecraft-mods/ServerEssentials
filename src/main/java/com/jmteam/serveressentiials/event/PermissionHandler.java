@@ -18,7 +18,7 @@ public class PermissionHandler {
             EntityPlayer player = (EntityPlayer) e.getSender();
             if(!PlayerUtils.players.get(player).getRank().canRunCommand(e.getCommand().getName())) {
                 e.setCanceled(true);
-                e.getSender().sendMessage(new TextComponentString(TextFormatting.RED + "You cannot use this command!"));
+                e.getSender().sendMessage(new TextComponentString(TextFormatting.RED + "You don't have permission!"));
             }
         }
     }
